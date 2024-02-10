@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@*@Html.ValidationSummary()*@
+
+<form action="" method="post" class="needs-validation" novalidate>
+    <div class="mb-3">
+        <label for="name">Name:</label>
+        <input type="text" value="@Model.Name" name="name" class="form-control" id="name" required>
+        <span class="text-danger">@Html.ValidationMessage("Name")</span>
+        <div class="invalid-feedback">
+            Please provide a valid name.
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="username">User Name:</label>
+        <input type="text" value="@Model.UserName" name="username" class="form-control" id="username" required>
+        <span class="text-danger">@Html.ValidationMessage("UserName")</span>
+        <div class="invalid-feedback">
+            Please provide a valid username.
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="id">ID:</label>
+        <input type="text" value="@Model.ID" name="id" class="form-control" id="id" required>
+        <span class="text-danger">@Html.ValidationMessage("ID")</span>
+        <div class="invalid-feedback">
+            Please provide a valid ID.
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="email">Email:</label>
+        <input type="email" value="@Model.Email" name="email" class="form-control" id="email" required>
+        <span class="text-danger">@Html.ValidationMessage("Email")</span>
+        <div class="invalid-feedback">
+            Please provide a valid email.
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
